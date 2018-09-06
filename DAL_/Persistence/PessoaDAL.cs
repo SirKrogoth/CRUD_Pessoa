@@ -24,6 +24,8 @@ namespace DAL_.Persistence
                 command.Parameters.AddWithValue("@v3", p.email);
 
 
+                command.ExecuteNonQuery();
+
             }
             catch (Exception e)
             {
