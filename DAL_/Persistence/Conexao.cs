@@ -27,11 +27,6 @@ namespace DAL_.Persistence
             {
                 throw new Exception(e.Message);
             }
-            finally
-            {
-                conexao.Close();
-            }
-
         }
 
         //Método - Fechar conexão

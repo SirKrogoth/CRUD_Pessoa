@@ -13,5 +13,26 @@ namespace Site.Pages
         {
 
         }
+
+        protected void btmMenu_Click(object sender, EventArgs e)
+        {
+            var opcao = ddlMenu.SelectedValue;
+
+            switch(opcao)
+            {
+                case "0":
+                    lblMensagem.Text = "Por favor, selecione alguma das opções citadas.";
+                    break;
+                case "1":
+                    Response.Redirect("/Pages/Cadastro.aspx");
+                    break;
+                case "2":
+                    Response.Redirect("/Pages/Consulta.aspx");
+                    break;
+                case "3":
+                    Response.Redirect("/Pages/Detalhes.aspx");
+                    break;
+            }
+        }
     }
 }

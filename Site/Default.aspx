@@ -23,7 +23,7 @@
                 <asp:ListItem Value="3" Text="Obter dados de Cliente"></asp:ListItem>
             </asp:DropDownList>
 
-            <asp:Button id="btmMenu" runat="server" Text="Acessar" CssClass="btn btn-primary btn-"/>
+            <asp:Button id="btmMenu" runat="server" Text="Acessar" CssClass="btn btn-primary" OnClick="btmMenu_Click"/>
 
             <p>
                 <asp:Label ID="lblMensagem" runat="server" class="lead"></asp:Label>
