@@ -25,9 +25,7 @@
 
             <asp:Button id="btmMenu" runat="server" Text="Acessar" CssClass="btn btn-primary" OnClick="btmMenu_Click"/>
 
-            <p>
-                <asp:Label ID="lblMensagem" runat="server" class="lead"></asp:Label>
-            </p>
+            <asp:Label ID="lblMensagem" runat="server"></asp:Label>
         </div>
     </form>
 </body>
