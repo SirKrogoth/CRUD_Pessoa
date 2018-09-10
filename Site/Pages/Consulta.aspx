@@ -31,7 +31,7 @@
                         <asp:Label id="lblMensagem" runat="server" />                                                   
                     </p>
 
-                    <a ID="btnVoltar" class="btn btn-secondary" href="../Default.aspx">Voltar</a>
+                    <a id="btnVoltar" class="btn btn-secondary" href="../Default.aspx">Voltar</a>
                 </div>
             </div>
         </div>
