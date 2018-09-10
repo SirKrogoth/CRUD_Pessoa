@@ -40,8 +40,8 @@
                         ForeColor="Red"/>
                     <br />
                     
-                    <p>Email:</p>
-                    <asp:TextBox ID="txtEmail" runat="server" with="45%" CssClass="form-control" placeholder="Telefone"></asp:TextBox>
+                    <p>E-mail:</p>
+                    <asp:TextBox ID="txtEmail" runat="server" with="45%" CssClass="form-control" placeholder="E-mail"></asp:TextBox>
                     
                     <asp:RequiredFieldValidator 
                         id="requiredEmail"

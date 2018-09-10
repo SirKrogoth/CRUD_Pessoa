@@ -103,8 +103,8 @@ namespace DAL_.Persistence
 
                     p.codigo = Convert.ToInt32(reader["codigo"]);
                     p.nome = reader["nome"].ToString();
-                    p.endereco = reader["codigo"].ToString();
-                    p.email = reader["codigo"].ToString();
+                    p.endereco = reader["endereco"].ToString();
+                    p.email = reader["email"].ToString();
                 }
 
                 return p;

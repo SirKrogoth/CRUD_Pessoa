@@ -47,9 +47,9 @@ namespace Site.Pages
 
         public void LimparCadastroCliente()
         {
-            txtNome.Text = "";
-            txtEndereco.Text = "";
-            txtEmail.Text = "";
+            txtNome.Text = string.Empty;
+            txtEndereco.Text = string.Empty;
+            txtEmail.Text = string.Empty;
         }
     }
 }

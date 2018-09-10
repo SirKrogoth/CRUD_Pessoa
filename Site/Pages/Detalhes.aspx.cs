@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using DAL_.Model;
+using DAL_.Persistence;
 
 namespace Site.Pages
 {
@@ -12,6 +14,40 @@ namespace Site.Pages
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                pnlDados.Visible = true;
+
+                Pessoa p = new Pessoa();
+                PessoaDAL pDAL = new PessoaDAL();
+
+                p = pDAL.PesquisarPessoaPorCodigo(Convert.ToInt32(txtCodigo.Text));
+
+                txtCodigo.Text = p.codigo.ToString();
+                txtCodigo.Enabled = false;
+
+                txtNome.Text = p.nome.ToString();
+                txtEndereco.Text = p.endereco.ToString();
+                txtEmail.Text = p.email.ToString();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        protected void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("../Default.aspx");
         }
     }
 }

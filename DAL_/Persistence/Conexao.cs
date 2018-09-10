@@ -19,7 +19,8 @@ namespace DAL_.Persistence
         {
             try
             {
-                conexao = new SqlConnection(@"Data Source=DESKTOP-ORTRKJA\MSSQLSERVER2014;Initial Catalog=CRUDPessoa;User ID=sa;Password=506829");
+                //conexao = new SqlConnection(@"Data Source=DESKTOP-ORTRKJA\MSSQLSERVER2014;Initial Catalog=CRUDPessoa;User ID=sa;Password=506829");
+                conexao = new SqlConnection(@"Data Source=(local);Initial Catalog=CRUDPessoa;User ID=sa;Password=a2m8x7h5");
 
                 conexao.Open();
             }

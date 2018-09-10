@@ -14,22 +14,37 @@
     <form id="form1" runat="server">
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                <h1 class="display-4">Projeto CRUD - Cadastro de Clientes</h1>
+                <div class="col-10 offset-1">                 
+                <h3>Detalhes do cliente</h3>
 
-                <p class="lead">Selecione a operalção desejada:</p>
-                <asp:DropDownList ID="ddlMenu" runat="server">
-                    <asp:ListItem Value="0" Text="- Selecione -"></asp:ListItem>
-                    <asp:ListItem Value="1" Text="- Cadastrar Pessoa -"></asp:ListItem>
-                    <asp:ListItem Value="2" Text="- Consultar Pessoa -"></asp:ListItem>
-                    <asp:ListItem Value="3" Text="- Detalhes de Pessoa -"></asp:ListItem>
-                </asp:DropDownList>
-                <asp:Button id="btnMenu" runat="server" Text="Acessar" CssClass="btn btn-primary btn-lg"/>
+                <asp:TextBox runat="server" ID="txtCodigo" CssClass="form-control" Width="5%" OnTextChanged="txtCodigo_TextChanged" />
+                <br />
+                
+                <asp:Button ID="btnPesquisar" runat="server" CssClass="btn btn-primary" Text="Pesquisar" OnClick="btnPesquisar_Click"/>    
+                <asp:Button runat="server" ID="btnVoltar" Text="Voltar" CssClass="btn btn-secondary" OnClick="btnVoltar_Click"/>
+                <br />
+                <br />
+                <br />
 
-                <p class="lead">
-                    <asp:Label ID="lblMensagem" runat="server" class="lead"></asp:Label>
-                </p>
-            </div>
-        </div>
+                <asp:Panel runat="server" ID="pnlDados" Visible="false">
+                    <p>Nome do cliente</p>
+                    <asp:TextBox runat="server" ID="txtNome" CssClass="form-control" Width="45%" Placeholder="Nome"></asp:TextBox>
+                    <br />
+                
+                    <p>Endereço do cliente</p>
+                    <asp:TextBox runat="server" ID="txtEndereco" CssClass="form-control" Width="45%" Placeholder="Endereço"></asp:TextBox>
+                    <br />
+                
+                    <p>E-mail do cliente</p>
+                    <asp:TextBox runat="server" ID="txtEmail" CssClass="form-control" Width="45%" Placeholder="Email"></asp:TextBox>
+                    <br />
+        
+                    <asp:Button runat="server" ID="btnExcluir" Text="Excluir" CssClass="btn btn-danger"/>
+                    <asp:Button runat="server" ID="btnAtualizar" Text="Atualizar" CssClass="btn btn-warning"/>
+                    
+                </asp:Panel>
+            </div>              
+        </div>        
     </form>
 </body>
 </html>
