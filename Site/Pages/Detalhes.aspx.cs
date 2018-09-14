@@ -77,7 +77,22 @@ namespace Site.Pages
         {
             try
             {
+                Pessoa p = new Pessoa();
+                PessoaDAL pDAL = new PessoaDAL();
 
+                p.codigo = Convert.ToInt32(txtCodigo.Text);
+                p.nome = txtNome.Text;
+                p.endereco = txtEndereco.Text;
+                p.email = txtEmail.Text;
+
+                pDAL.AtualizarDados(p);
+
+                lblMensagem.Text = "Pessoa atualizada com sucesso.";
+
+                pnlDados.Visible = false;
+                txtCodigo.Enabled = true;
+
+                LimparTela();
             }
             catch (Exception ex)
             {
